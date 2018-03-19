@@ -1,0 +1,89 @@
+
+/*.navbar-header
+===================*/
+
+.navbar-header	{
+	display:block;
+	margin:0 0 0 0;
+}
+
+.navbar-header .title-wrapper	{
+	text-transform:uppercase;
+	text-align:center;
+	color:#FFD32A;
+	background:url('../images/logo-bg.png') no-repeat top left;
+	width:220px;
+	height:70px;
+	position:relative;
+	/*top:-20px;*/
+	padding:0px 10px 0 10px;
+	margin:0;
+	line-height:100%;
+	float:left;
+	font-size:1.2em;
+	display:inline-block;
+}
+.navbar-header .title-wrapper .logo{
+	float:left;
+}
+
+.navbar-header .title-wrapper .site-title{
+	float:right;
+}
+
+.navbar-header .title-wrapper .site-title > h1{
+	font-size:0.5em;
+	padding:15px 0 0 0;
+}
+
+.navbar-header img{
+	width: 60px;
+	height: 60px;
+	float: left:
+}
+.navbar-header .title-wrapper span	{
+	text-transform:lowercase;
+	color:#CCC;
+	font-style:italic;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:0.4em;
+	line-height:120%;
+	display: block;
+	padding:0 0 0 0;
+}
+
+
+/*footer
+===================*/
+
+.footerBox{
+	background:#404040;
+}
+footer	{
+	color:#F9F9F9;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:1em;
+	padding:20px 0;
+}
+footer a	{
+	color:#FFD32A;
+}
+footer a:hover	{
+	color:#FFFFFF;
+}
+footer small{
+	text-align:center;
+	clear:both;
+	display:block;
+}
+footer h1{
+	font-size:1.625em;
+}
+footer article	{
+	margin:0 0 20px 0;
+}
+footer li a	{
+	padding:10px;
+	display:block;
+	border-bottom:1px dashed #999;
+}
