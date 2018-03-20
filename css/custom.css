@@ -60,16 +60,23 @@
 	background:#404040;
 }
 footer	{
-	color:#F9F9F9;
+	/*color:#F9F9F9;*/
 	font-family:Georgia, "Times New Roman", Times, serif;
 	font-size:1em;
-	padding:20px 0;
+	/*padding:20px 0;*/
+    background:#404040;
+      color: #f5f5f5;
+     text-align:center;
+     
 }
 footer a	{
 	color:#FFD32A;
+    /* color: #f5f5f5;*/
 }
 footer a:hover	{
 	color:#FFFFFF;
+  /* color: #777;
+      text-decoration: none;*/
 }
 footer small{
 	text-align:center;
@@ -82,8 +89,8 @@ footer h1{
 footer article	{
 	margin:0 0 20px 0;
 }
-footer li a	{
-	padding:10px;
-	display:block;
-	border-bottom:1px dashed #999;
+footer li {
+   	padding:10px;
+	display:inline;
+	/*border-bottom:1px dashed #999;*/
 }
