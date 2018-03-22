@@ -1,5 +1,6 @@
 <?php  # index.php
     //Need utilities file here:
+require('includes/utiities.php');
 
 //inlude the header:
 $pageTitle = 'Welcome to Dong Hanh CLC - Agape';
