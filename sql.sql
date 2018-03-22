@@ -1,4 +1,4 @@
-CREATE TABLE users (
+CREATE TABLE IF NOT EXISTS users  (
 user_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
 user_type ENUM('public','author','admin'),
 username VARCHAR(30) NOT NULL,
@@ -11,7 +11,7 @@ UNIQUE (user_email),
 INDEX login (user_email, user_password)
 );
 
-CREATE TABLE pages (
+CREATE TABLE  IF NOT EXISTS  pages (
 page_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
 page_creator_id INT UNSIGNED NOT NULL,
 page_title VARCHAR(100) NOT NULL,
