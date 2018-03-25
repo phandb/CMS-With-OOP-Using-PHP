@@ -20,22 +20,22 @@ class User {
     
     //Method return User ID
     function getUserId() {
-        return $this->$userId;
+        return $this->userId;
     }
     
     //Method return boolean if user is an admin
     function isAdmin() {
-        return ($this->$userType=='admin');
+        return ($this->userType=='admin');
     }
     
     //Method return a Boolean indicating if user is an admin or author
     function canEditPage() {
-        return ($this->isAdmin() || ($this->$userId == $page->getPageCreatorId()));
+        return ($this->isAdmin() || ($this->userId == $page->getCreatorId()));
     }
         
     //Method return a Boolean indicating if user is an admin or author
     function canCreatePage() {
-        return ($this->isAdmin() || ($this->$userType== 'author'));
+        return ($this->isAdmin() || ($this->userType== 'author'));
     }
     
 }  //End of User class

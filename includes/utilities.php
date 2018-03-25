@@ -21,12 +21,13 @@ $user = (isset($_SESSION['user'])) ? $_SESSION['user'] : null;
 try{
     //create an object:
     $pdo_conn = new PDO('mysql:dbname=cms_oop; host=localhost', 'root', 'Thaihoa92');
+    //echo "Database Connected Successful!";
 }catch (PDOException $e){
     //report the error!
     
     $pageTitle = 'Error!';
     include('includes/header.php');
-    include('views/error.html');
+    include('views/view_error.php');
     include('includes/footer.php');
     exit();
 }

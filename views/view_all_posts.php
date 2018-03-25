@@ -4,33 +4,35 @@
         <div class="row">
 
             <!-- Blog Entries Column -->
-            <div class="col-md-8">
+            <div class="col-md-9">
 
-                <h1 class="page-header">
-                    Page Heading
-                    <small>Secondary Text</small>
-                </h1>
+                <h2 class="page-header">
+                   LENT REFLECTIONS
+                    <small></small>
+                </h2>
                 
                 <?php //fetch the posts and display them here
                 
+                //echo "<td><a href='posts.php?source=edit_post&p_id={$post_id}'>Edit</a></td>";
+                 // echo "<td><a href='posts.php?delete={$post_id}'>Delete</a></td>";
+                
                     while ($page = $rs->fetch()) {
-                        echo "<h2>
-                                <a href="#"> { $page->getPageTitle()}</a>
-                            </h2>
-                            <p class="lead">
-                                by {$page->getPageauthor()}
-                            </p>
-                            <p><span class="glyphicon glyphicon-time"></span> {$page->getPageDateAdded()}</p>
-                            <hr>
-                                <img class="img-responsive" src="images/Lent.png" alt="">
-                            <hr>
-                            <p>{$page->getPageContent()}</p>
+                       
+                        echo "<h3><a href='page.php?pageId={$page->getPageId()}'>{$page->getPageTitle()}</a></h3>";
+                        echo "<p class='lead'>by {$page->getPageAuthor()} </p>";
+                        echo "<p><span class='glyphicon glyphicon-time'></span> {$page->getPageDateAdded()}</p>";
+                       
+                        echo " <img class='img-responsive' src='images/lent.jpg' alt=''> ";
+                      
+                        echo "<p>{$page->getPageIntro()}</p>";
+                        echo " <p><a href='page.php?pageId={$page->getPageId()}'>read more...</a></p> ";
+                         echo " <hr>";
                     }    
                 
                 
                 ?>
 
-                <!-- First Blog Post -->
+                <!-- First Blog Post 
                 <h2>
                     <a href="#">Blog Post Title</a>
                 </h2>
@@ -45,12 +47,13 @@
                 <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 
                 <hr>
-       
+              
+                    ---->
 
             </div>
 
             <!-- Blog Sidebar Widgets Column -->
-            <div class="col-md-4">
+            <div class="col-md-3">
 
                 <!-- Blog Search Well -->
                 <!--form class="form-inline">

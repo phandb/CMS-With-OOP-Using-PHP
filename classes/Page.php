@@ -10,44 +10,58 @@
 
 class Page {
     //all attributes are protected and correspond to database columns
-    
-    protected $pageId = null;
-    protected $pageCreatorId = null;
-    protected $pageTitle = null;
-    protected $pageContent = null;
-    protected $pageDateAdded = null;
-    protected $pageDateUpdated = null;
+    //All attributes need to match column name exactly
+    protected $page_id = null;
+    protected $page_creator_id = null;
+    protected $page_title = null;
+    protected $page_author = null;
+    protected $page_content = null;
+    protected $page_date_added = null;
+    protected $page_date_updated = null;
     
     //Method return User ID
     function getPageId() {
-        return $this->$pageId;
+        return $this->page_id;
     }
     
      function getPageCreatorId() {
-        return $this->$pageCreatorId;
+        return $this->page_creator_id;
     }
+    
      function getPageTitle() {
-        return $this->$pageTitle;
+        return $this->page_title;
     }
+    
+    function getPageAuthor() {
+        return $this->page_author;
+    }
+    
      function getPageContent() {
-        return $this->$pageContent;
+        return $this->page_content;
     }
+    
      function getPageDateAdded() {
-        return $this->$pageDateAdded;
+        return $this->page_date_added;
     }
+    
      function getPageDateUpdated() {
-        return $this->$pageDateUpdated;
+        return $this->page_date_updated;
     }
     
     //Method return the first X characters from content:
     
-    function getPageIntro($count = 200) {
+    function getPageIntro($count = 700) {
         
-        return substr(strip_tags($this->$pageContent), 0, $count) . '...';
+        return substr(strip_tags($this->page_content), 0, $count) . '...';
     }
     
     
 }  //End of Page class
 
-
+/*if (method_exists("Page", "getPageId")){
+    echo "The Method Exists";
+    
+}else{
+    echo "No, it does not";
+}*/
 ?>
