@@ -4,17 +4,17 @@
 //include the View file
 
     //Need utilities file here:
-require('includes/utiities.php');
+require('includes/utilities.php');
 
 try{
     //Validate page ID:  page ID received? and should be an integer greater than or equal to 1
-    if(!isset($_GET['pageId']) || !filter_var($_GET['pageId'], FILTER_VALIDATE_INT, array('min_range'=> 1))){
+    if(!isset($_GET['pageId']) || !filter_var($_GET['pageId'], FILTER_VALIDATE_INT, array('min_range' => 1))){
         throw new Exception('An invalid page ID was provided to this page.');
         
     }
     
     //Fetch the page from the database:
-    $select_page_query = 'SELECT page_id, page_title, page_author, page_content, DATE_FORMAT(page_date_added, "%M %e %Y") AS page_date_added FROM pages WHERE page_id = pageId';
+    $select_page_query = 'SELECT page_id, page_title, page_sub_title, page_excerpt, page_author, page_content, DATE_FORMAT(page_date_added, "%M %e %Y") AS page_date_added FROM pages WHERE page_id = :pageId';
     $stmt = $pdo_conn->prepare( $select_page_query);
     $rs = $stmt->execute(array(':pageId' => $_GET['pageId']));
 

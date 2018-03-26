@@ -1,32 +1,38 @@
     <!-- Page Content -->
     <div class="container">
 
-        <div class="row">
+        <div class="row mt-4">
 
             <!-- Blog Entries Column -->
-            <div class="col-md-9">
+            <div class="col-md-8">
 
-                <h2 class="page-header">
-                   LENT REFLECTIONS
-                    <small></small>
-                </h2>
-                
+                <h4 class="text-center text-uppercase text-primary">
+                   Lent reflections
+                    <small>2018</small>
+                </h4>
+               <div><img class='img-fluid' src='images/lent.jpg' alt=''></div>
                 <?php //fetch the posts and display them here
                 
                 //echo "<td><a href='posts.php?source=edit_post&p_id={$post_id}'>Edit</a></td>";
                  // echo "<td><a href='posts.php?delete={$post_id}'>Delete</a></td>";
                 
                     while ($page = $rs->fetch()) {
-                       
-                        echo "<h3><a href='page.php?pageId={$page->getPageId()}'>{$page->getPageTitle()}</a></h3>";
-                        echo "<p class='lead'>by {$page->getPageAuthor()} </p>";
-                        echo "<p><span class='glyphicon glyphicon-time'></span> {$page->getPageDateAdded()}</p>";
-                       
-                        echo " <img class='img-responsive' src='images/lent.jpg' alt=''> ";
-                      
-                        echo "<p>{$page->getPageIntro()}</p>";
+                       echo "<div class='card bg-light mb-2'>";
+                         echo "<div class='card-body'>";
+                        
+                        echo "<h5 class='card-title'><a href='page.php?pageId={$page->getPageId()}'>{$page->getPageTitle()}</a></h5>";
+                        
+                        
+                        echo "<p class='card-text'><small class='text-muted'> by {$page->getPageAuthor()} </small></p>";
+                        echo "<p class='card-text'><small class='text-muted'> {$page->getPageDateAdded()}</small></p>";
+                        echo "<p class='card-text'><small class='text-muted'>  {$page->getPageSubTitle()} </small></p>";
+                        echo "<p class='card-text'><small class='text-muted'>  {$page->getPageExcerpt()} </small></p>";              
+                        echo "<p class='card-text text-justify'>{$page->getPageIntro()}</p>";
                         echo " <p><a href='page.php?pageId={$page->getPageId()}'>read more...</a></p> ";
-                         echo " <hr>";
+                        
+                        
+                         echo "</div>";
+                        echo "</div>";
                     }    
                 
                 
@@ -53,7 +59,7 @@
             </div>
 
             <!-- Blog Sidebar Widgets Column -->
-            <div class="col-md-3">
+            <div class="col-md-3 mt-5">
 
                 <!-- Blog Search Well -->
                 <!--form class="form-inline">

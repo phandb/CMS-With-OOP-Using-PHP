@@ -11,15 +11,18 @@
 class Page {
     //all attributes are protected and correspond to database columns
     //All attributes need to match column name exactly
-    protected $page_id = null;
-    protected $page_creator_id = null;
-    protected $page_title = null;
-    protected $page_author = null;
-    protected $page_content = null;
-    protected $page_date_added = null;
-    protected $page_date_updated = null;
+    protected $pageId = null;
+    protected $pageCreatorId = null;
+    protected $pageTitle = null;
+    protected $pageSubTitle = null;
+    protected $pageExcerpt = null;
+    protected $pageAuthor = null;
+    protected $pageContent = null;
+    protected $pageDateAdded = null;
+    protected $pageDateUpdated = null;
     
     //Method return User ID
+    //value returned has to be matched up with table columns
     function getPageId() {
         return $this->page_id;
     }
@@ -30,6 +33,14 @@ class Page {
     
      function getPageTitle() {
         return $this->page_title;
+    }
+    
+     function getPageSubTitle() {
+        return $this->page_sub_title;
+    }
+    
+     function getPageExcerpt() {
+        return $this->page_excerpt;
     }
     
     function getPageAuthor() {
@@ -50,7 +61,7 @@ class Page {
     
     //Method return the first X characters from content:
     
-    function getPageIntro($count = 700) {
+    function getPageIntro($count = 300) {
         
         return substr(strip_tags($this->page_content), 0, $count) . '...';
     }
