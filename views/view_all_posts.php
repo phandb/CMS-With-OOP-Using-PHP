@@ -1,15 +1,17 @@
     <!-- Page Content -->
     <div class="container">
+                <h4 class="text-sm-center text-uppercase text-primary mt-3">
+                   Lent reflections
+                    <small>2018</small>
+                </h4>
+                </div>
+    <div class="container">
 
         <div class="row mt-4">
 
             <!-- Blog Entries Column -->
             <div class="col-md-8">
-
-                <h4 class="text-center text-uppercase text-primary">
-                   Lent reflections
-                    <small>2018</small>
-                </h4>
+               
                <div><img class='img-fluid' src='images/lent.jpg' alt=''></div>
                 <?php //fetch the posts and display them here
                 
@@ -17,7 +19,7 @@
                  // echo "<td><a href='posts.php?delete={$post_id}'>Delete</a></td>";
                 
                     while ($page = $rs->fetch()) {
-                       echo "<div class='card bg-light mb-2'>";
+                       echo "<div class='card bg-light mb-3'>";
                          echo "<div class='card-body'>";
                         
                         echo "<h5 class='card-title'><a href='page.php?pageId={$page->getPageId()}'>{$page->getPageTitle()}</a></h5>";
@@ -59,29 +61,33 @@
             </div>
 
             <!-- Blog Sidebar Widgets Column -->
-            <div class="col-md-3 mt-5">
+            <div class="col-md-4 ">
 
                 <!-- Blog Search Well -->
                 <!--form class="form-inline">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
               </form-->
-                <div class="card">
-                    <h4>Blog Search</h4>
-                    <div class="input-group">
-                        <input type="text" class="form-control">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                                <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                        </span>
+                <div class="card mb-3">
+                  <!--h5 class="card-header">Blog Search</h5-->
+                   <div class="card-body">
+                    
+                    <div class="input-group mb-3">
+                    <form class="form-inline ">
+                      <input class="form-control " type="search" placeholder="Blog Search" aria-label="Search">
+                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"> Search</button>
+                    </form>
                     </div>
+                    </div>
+
                     <!-- /.input-group -->
                 </div>
 
                 <!-- Blog Categories Well -->
-                <div class="card">
-                    <h4>Blog Categories</h4>
+                <div class="card mb-3">
+                   <h5 class="card-header text-sm-left ">Blog Categories</h5>
+                   <div class="card-body">
+                   
                     <div class="row">
                         <div class="col-lg-12">
                             <ul class="list-unstyled">
@@ -99,12 +105,15 @@
                         
                     </div>
                     <!-- /.row -->
+                    </div>
                 </div>
 
                 <!-- Side Widget Well -->
-                <div class="card">
-                    <h4>Side Widget Well</h4>
+                <div class="card mb-3">
+                    <h5 class="card-header text-sm-left ">Side Widget Card</h5>
+                    <div class="card-body">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
+                    </div>
                 </div>
 
             </div>

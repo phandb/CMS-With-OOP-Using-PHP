@@ -5,8 +5,9 @@
     <meta http-equiv = "content-type" content="text/html"; charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS Version 4.0-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <link href="css/custom.css" rel="stylesheet">
 
     <title><?php echo (isset($pageTitle)) ? $pageTitle : 'Dong Hanh CLC-Agape'; ?> </title>

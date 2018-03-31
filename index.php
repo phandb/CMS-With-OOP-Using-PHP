@@ -37,3 +37,11 @@ try{
 include('includes/footer.php');
 
 ?>
+<?php /*
+require_once 'System.php';
+if(class_exists('System')) {
+   echo 'PEAR is installed!';
+} else {
+   echo 'PEAR is not installed :(';
+}*/
+?>
