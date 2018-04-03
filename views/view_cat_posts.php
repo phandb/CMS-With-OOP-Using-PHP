@@ -18,9 +18,10 @@
                 //echo "<td><a href='posts.php?source=edit_post&p_id={$post_id}'>Edit</a></td>";
                  // echo "<td><a href='posts.php?delete={$post_id}'>Delete</a></td>";
                 
-                    while ($page = $rs->fetch()) {
-                       echo "<div class='card bg-light mb-3'>";
-                         echo "<div class='card-body'>";
+                    while ($page = $stmt->fetch()) {
+                       
+                        echo "<div class='card bg-light mb-3'>";
+                        echo "<div class='card-body'>";
                         echo "<p class='card-text'><small class='text-uppercase text-muted'>  {$page->getPageSubTitle()} </small></p>";
                         
                         echo "<h5 class='card-title'><a href='page.php?pageId={$page->getPageId()}'>{$page->getPageTitle()}</a></h5>";
@@ -34,8 +35,9 @@
                         echo " <p><a href='page.php?pageId={$page->getPageId()}'>read more...</a></p> ";
                         
                         
-                         echo "</div>";
                         echo "</div>";
+                        echo "</div>";
+                       
                     }    
                 
                 

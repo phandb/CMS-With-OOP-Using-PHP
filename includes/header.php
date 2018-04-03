@@ -49,7 +49,8 @@
                         echo '<a class="nav-link" href="logout.php">LOGOUT</a>';                                
     
                     } else {
-                        echo '<a class="nav-link" href="login.php">LOGIN</a>';
+                        //echo '<a class="nav-link" href="login.php">LOGIN</a>';
+                        echo '<a class="nav-link" data-toggle="modal" href="#loginModal">LOGIN</a>';
                     }
            ?>
       </li>
@@ -64,3 +65,46 @@
   </div>
   </nav>
  <!---End of Navigator Bar----->
+ 
+
+
+<!-- Login  Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+   
+    <form class="modal-content animate" action="/userLogin.php">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalTitle">User Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+         <!--img src="img_avatar2.png" alt="Avatar" class="avatar" -->
+      </div>
+      
+      <div class="modal-body">
+        <div class="container">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" placeholder="Enter Username" name="username" required>
+            
+            <label for="password">Password</label>
+            <input type="password"  class="form-control" placeholder="Enter Password" name="password" required>
+            
+            <div class="form-check mb-3 mt-3">
+                <input type="checkbox" class="form-check-input"  name="remember">
+                <label class="form-check-label">Remember Me</label>
+                
+            </div>
+            
+            
+            
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+            
+        </div>
+      </div>
+      <div class="modal-footer clearfix">
+        <button type="button" class="btn btn-outline-danger float-left" data-dismiss="modal">Cancel</button>
+        <button type="button"  class=" btn btn-light float-right"><a href="#">Forgot password?</a></button>
+      </div>
+    </form>
+  </div>
+</div>
