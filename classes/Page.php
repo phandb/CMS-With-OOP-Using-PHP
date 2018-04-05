@@ -10,16 +10,17 @@
 
 class Page {
     //all attributes are protected and correspond to database columns
-    //All attributes need to match column name exactly
-    protected $pageId = null;
-    protected $pageCreatorId = null;
-    protected $pageTitle = null;
-    protected $pageSubTitle = null;
-    protected $pageExcerpt = null;
-    protected $pageAuthor = null;
-    protected $pageContent = null;
-    protected $pageDateAdded = null;
-    protected $pageDateUpdated = null;
+    
+    protected $page_id = null;
+    protected $page_creator_id = null;
+    protected $page_cat_id = null;
+    protected $page_title = null;
+    protected $page_sub_title = null;
+    protected $page_excerpt = null;
+    protected $page_author = null;
+    protected $page_content = null;
+    protected $page_date_added = null;
+    protected $page_date_updated = null;
     
     //Method return User ID
     //value returned has to be matched up with table columns
@@ -29,6 +30,10 @@ class Page {
     
      function getPageCreatorId() {
         return $this->page_creator_id;
+    }
+    
+    function getPageCategoryId(){
+        return $this->page_cat_id;
     }
     
      function getPageTitle() {

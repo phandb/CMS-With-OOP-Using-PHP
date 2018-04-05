@@ -9,7 +9,7 @@ include('includes/header.php');
 //include page content
 //Fetch the three most recent page:
 try{
-    $select_post_query = 'SELECT page_id, page_title, page_sub_title, page_excerpt, page_author, page_content, DATE_FORMAT(page_date_added, "%M %e %Y") AS page_date_added 
+    $select_post_query = 'SELECT page_id, page_creator_id, page_cat_id, page_title, page_sub_title, page_excerpt, page_author, page_content, DATE_FORMAT(page_date_added, "%M %e %Y") AS page_date_added 
     FROM pages ORDER BY page_date_added DESC LIMIT 3 ';
     
     $rs = $pdo_conn->query($select_post_query);

@@ -14,7 +14,7 @@ try{
     }
     
     //Fetch the page from the database:
-    $select_page_query = 'SELECT page_id, page_title, page_sub_title, page_excerpt, page_author, page_content, DATE_FORMAT(page_date_added, "%M %e %Y") AS page_date_added FROM pages WHERE page_id = :pageId';
+    $select_page_query = 'SELECT page_id, page_title, page_sub_title, page_excerpt, page_author, page_content, DATE_FORMAT(page_date_added, "%M %e %Y") AS page_date_added FROM pages WHERE page_id =:pageId';
     $stmt = $pdo_conn->prepare( $select_page_query);
     $rs = $stmt->execute(array(':pageId' => $_GET['pageId']));
 

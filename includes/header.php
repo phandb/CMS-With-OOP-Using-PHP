@@ -72,7 +72,7 @@
 <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
    
-    <form class="modal-content animate" action="/userLogin.php">
+    <form method="post" class="modal-content animate" action="user_login.php">
       <div class="modal-header">
         <h5 class="modal-title" id="loginModalTitle">User Login</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -97,7 +97,7 @@
             
             
             
-            <button type="submit" class="btn btn-primary btn-block">Login</button>
+            <button type="submit" name="login" class="btn btn-primary btn-block">Login</button>
             
         </div>
       </div>
